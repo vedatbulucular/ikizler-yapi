@@ -4,7 +4,7 @@ import { SectionHeading } from "@/components/ui/section-heading";
 
 export default function Home() {
   return (
-    <main className="min-h-screen py-16 sm:py-24">
+    <div className="py-16 sm:py-24">
       <Container>
         <div className="max-w-3xl">
           <h1 className="font-heading text-4xl font-semibold tracking-tight text-brand-dark sm:text-5xl">
@@ -34,6 +34,6 @@ export default function Home() {
           </div>
         </section>
       </Container>
-    </main>
+    </div>
   );
 }
