@@ -1,15 +1,15 @@
-import type { Metadata } from "next";
-
 import { ContactForm } from "@/components/contact/contact-form";
 import { Container } from "@/components/ui/container";
 import { PageIntro } from "@/components/ui/page-intro";
 import { SectionHeading } from "@/components/ui/section-heading";
+import { createPageMetadata } from "@/lib/site-metadata";
 
-export const metadata: Metadata = {
-  title: "İletişim | İkizler Yapı",
+export const metadata = createPageMetadata({
+  title: "İletişim",
   description:
-    "Hayalî İkizler Yapı portföy markasının temsili iletişim bilgileri ve güvenli demo proje formu.",
-};
+    "İkizler Yapı portföy projesinin temsili iletişim bilgilerini görüntüleyin ve hiçbir veriyi saklamayan güvenli demo formunu deneyin.",
+  path: "/iletisim",
+});
 
 const contactDetails = [
   { label: "E-posta", value: "ornek@ikizleryapi.test" },

@@ -1,16 +1,16 @@
-import type { Metadata } from "next";
-
 import { ContactCta } from "@/components/home/contact-cta";
 import { Container } from "@/components/ui/container";
 import { PageIntro } from "@/components/ui/page-intro";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { aboutPrinciples } from "@/data/home";
+import { createPageMetadata } from "@/lib/site-metadata";
 
-export const metadata: Metadata = {
-  title: "Hakkımızda | İkizler Yapı",
+export const metadata = createPageMetadata({
+  title: "Hakkımızda",
   description:
-    "Hayalî İkizler Yapı markasının tasarım yaklaşımı, misyonu, vizyonu ve değerleri.",
-};
+    "İkizler Yapı’nın işlevsel tasarım, planlı uygulama ve şeffaf iletişim odağındaki hayalî marka yaklaşımını, misyonunu ve değerlerini keşfedin.",
+  path: "/hakkimizda",
+});
 
 const values = [
   {
