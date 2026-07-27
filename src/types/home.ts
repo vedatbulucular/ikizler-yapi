@@ -3,6 +3,7 @@ export type Service = {
   readonly number: string;
   readonly title: string;
   readonly description: string;
+  readonly scope: readonly string[];
 };
 
 export type AboutPrinciple = {
@@ -11,7 +12,13 @@ export type AboutPrinciple = {
   readonly description: string;
 };
 
-export type ProjectVisualVariant = "courtyard" | "grid" | "interior";
+export type ProjectVisualVariant =
+  | "courtyard"
+  | "grid"
+  | "interior"
+  | "terrace"
+  | "frame"
+  | "axis";
 
 export type FeaturedProject = {
   readonly id: string;

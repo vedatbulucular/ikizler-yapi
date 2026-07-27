@@ -14,6 +14,7 @@ export const services = [
     title: "Konut projeleri",
     description:
       "Günlük yaşam alışkanlıklarını, arsa koşullarını ve uzun vadeli kullanımı birlikte değerlendiren konut çözümleri.",
+    scope: ["Mekânsal program", "Kütle ve cephe kararları", "Uygulama koordinasyonu"],
   },
   {
     id: "ticari-yapilar",
@@ -21,6 +22,7 @@ export const services = [
     title: "Ticari yapılar",
     description:
       "Marka deneyimi ile operasyonel ihtiyaçları dengede tutan, esnek ve işlevsel ticari mekânlar.",
+    scope: ["Kullanıcı akışı", "Esnek çalışma alanları", "Malzeme yaklaşımı"],
   },
   {
     id: "mimari-tasarim",
@@ -28,6 +30,7 @@ export const services = [
     title: "Mimari tasarım",
     description:
       "Bağlam, ölçek ve malzeme kararlarını tek bir düşünce etrafında buluşturan özgün tasarım yaklaşımı.",
+    scope: ["Konsept geliştirme", "Planlama kararları", "Tasarım dokümantasyonu"],
   },
   {
     id: "ic-mimarlik",
@@ -35,6 +38,7 @@ export const services = [
     title: "İç mimarlık",
     description:
       "Mekânsal akışı, ışığı ve kullanıcı ihtiyaçlarını merkeze alan bütüncül iç mekân kurguları.",
+    scope: ["Yerleşim kurgusu", "Malzeme ve renk", "Sabit mobilya yaklaşımı"],
   },
   {
     id: "renovasyon",
@@ -42,6 +46,7 @@ export const services = [
     title: "Tadilat ve renovasyon",
     description:
       "Mevcut yapı değerlerini korurken yeni kullanım ihtiyaçlarına uyum sağlayan kontrollü dönüşümler.",
+    scope: ["Mevcut durum analizi", "Dönüşüm senaryosu", "Uygulama takibi"],
   },
   {
     id: "proje-danismanligi",
@@ -49,6 +54,7 @@ export const services = [
     title: "Proje danışmanlığı",
     description:
       "Karar süreçlerini sadeleştiren, bütçe ve uygulama adımlarını birlikte ele alan proje desteği.",
+    scope: ["Kapsam değerlendirmesi", "Süreç planlama", "Karar desteği"],
   },
 ] as const satisfies readonly Service[];
 
@@ -79,7 +85,7 @@ export const aboutPrinciples = [
   },
 ] as const satisfies readonly AboutPrinciple[];
 
-export const featuredProjects = [
+export const projects = [
   {
     id: "avlu-izleri",
     name: "Avlu İzleri Konutları",
@@ -109,6 +115,36 @@ export const featuredProjects = [
     description:
       "Mevcut mekânsal izleri koruyup yeni yaşam senaryolarına açan, malzeme geçişleriyle tanımlanan bir renovasyon.",
     visualVariant: "interior",
+  },
+  {
+    id: "ceper-atolyeleri",
+    name: "Çeper Atölyeleri",
+    category: "Ticari yapı",
+    location: "Doğu Bölgesi",
+    year: "2023",
+    description:
+      "Üretim ve paylaşım alanlarını ortak bir dolaşım hattında buluşturan, farklı çalışma düzenlerine uyarlanabilir atölye kurgusu.",
+    visualVariant: "terrace",
+  },
+  {
+    id: "isik-esigi-evi",
+    name: "Işık Eşiği Evi",
+    category: "Konut",
+    location: "Batı Yerleşkesi",
+    year: "2025",
+    description:
+      "Günün değişen ışığını yaşam alanlarına taşıyan, açık ve kapalı mekânlar arasında kontrollü eşikler kuran bir konut çalışması.",
+    visualVariant: "frame",
+  },
+  {
+    id: "doku-katmani",
+    name: "Doku Katmanı",
+    category: "Renovasyon",
+    location: "İç Bölge",
+    year: "2024",
+    description:
+      "Farklı dönemlerden kalan yüzeyleri sade bir yeni katmanla birleştiren, mevcut yapıya saygılı iç mekân dönüşümü.",
+    visualVariant: "axis",
   },
 ] as const satisfies readonly FeaturedProject[];
 
