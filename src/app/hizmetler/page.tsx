@@ -1,15 +1,15 @@
-import type { Metadata } from "next";
-
 import { ContactCta } from "@/components/home/contact-cta";
 import { Container } from "@/components/ui/container";
 import { PageIntro } from "@/components/ui/page-intro";
 import { services } from "@/data/home";
+import { createPageMetadata } from "@/lib/site-metadata";
 
-export const metadata: Metadata = {
-  title: "Hizmetler | İkizler Yapı",
+export const metadata = createPageMetadata({
+  title: "Hizmetler",
   description:
-    "Hayalî İkizler Yapı markasının konut, ticari yapı, mimari tasarım, iç mimarlık, renovasyon ve danışmanlık hizmetleri.",
-};
+    "Konut ve ticari yapı projelerinden iç mimarlık, renovasyon ve danışmanlığa uzanan İkizler Yapı hizmet yaklaşımını inceleyin.",
+  path: "/hizmetler",
+});
 
 export default function ServicesPage() {
   return (

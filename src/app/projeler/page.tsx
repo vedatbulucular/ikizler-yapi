@@ -1,15 +1,15 @@
-import type { Metadata } from "next";
-
 import { ProjectVisual } from "@/components/projects/project-visual";
 import { Container } from "@/components/ui/container";
 import { PageIntro } from "@/components/ui/page-intro";
 import { projects } from "@/data/home";
+import { createPageMetadata } from "@/lib/site-metadata";
 
-export const metadata: Metadata = {
-  title: "Projeler | İkizler Yapı",
+export const metadata = createPageMetadata({
+  title: "Projeler",
   description:
-    "İkizler Yapı portföyü için oluşturulmuş altı özgün ve tamamen hayalî mimari proje.",
-};
+    "İkizler Yapı portföyü için oluşturulmuş konut, ticari yapı, iç mimarlık ve renovasyon odağındaki altı özgün hayalî projeyi inceleyin.",
+  path: "/projeler",
+});
 
 export default function ProjectsPage() {
   return (
