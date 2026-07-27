@@ -1,17 +1,9 @@
 import Link from "next/link";
 
+import { ProjectVisual } from "@/components/projects/project-visual";
 import { ButtonLink } from "@/components/ui/button-link";
 import { Container } from "@/components/ui/container";
-import { featuredProjects } from "@/data/home";
-import type { ProjectVisualVariant } from "@/types/home";
-
-const visualStyles: Record<ProjectVisualVariant, string> = {
-  courtyard:
-    "before:absolute before:inset-[18%] before:border before:border-brand-dark/35 after:absolute after:bottom-[18%] after:left-[18%] after:size-[31%] after:bg-accent",
-  grid: "before:absolute before:inset-y-[16%] before:left-[24%] before:w-[18%] before:bg-brand-dark after:absolute after:bottom-[16%] after:right-[16%] after:h-[42%] after:w-[34%] after:border after:border-accent-dark",
-  interior:
-    "before:absolute before:bottom-0 before:left-[16%] before:h-[72%] before:w-[34%] before:bg-brand-secondary after:absolute after:right-[14%] after:top-[16%] after:size-[36%] after:rounded-full after:border after:border-accent-dark",
-};
+import { projects } from "@/data/home";
 
 export function FeaturedProjectsSection() {
   return (
@@ -36,15 +28,9 @@ export function FeaturedProjectsSection() {
         </div>
 
         <div className="mt-12 grid gap-6 lg:grid-cols-3">
-          {featuredProjects.map((project) => (
+          {projects.slice(0, 3).map((project) => (
             <article key={project.id} className="bg-surface text-text">
-              <div
-                aria-hidden="true"
-                className={`relative aspect-[4/3] overflow-hidden bg-canvas ${visualStyles[project.visualVariant]}`}
-              >
-                <div className="absolute inset-x-0 top-1/2 border-t border-border" />
-                <div className="absolute inset-y-0 right-[28%] border-l border-border" />
-              </div>
+              <ProjectVisual variant={project.visualVariant} />
               <div className="p-6 sm:p-7">
                 <div className="flex flex-wrap gap-x-4 gap-y-1 font-heading text-xs font-semibold uppercase tracking-[0.12em] text-accent-dark">
                   <span>{project.category}</span>
